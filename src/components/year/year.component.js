@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
-import { Month } from './components';
+import Month from '../../components';
 
 const currentYear = new Date().getFullYear(); 
 
-export default class App extends React.Component {
+export default class yearComponent extends React.Component {
 
   state = {
     months: Array(12).fill(null).map((x, index) => {
