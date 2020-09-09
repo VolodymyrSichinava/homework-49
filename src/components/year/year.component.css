@@ -1,8 +1,9 @@
 .year {
   text-align: center;
   font-size: 100px;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 25px;
+  margin-bottom: 60px;
 }
 
 .list_month {

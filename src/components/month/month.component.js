@@ -45,8 +45,8 @@ export default class MonthComponent extends Component {
 
     let nowDate = new Date();
     let today = nowDate.getDate();
-    let currentMonth;
-    let currentYear = nowDate.getFullYear();
+    let currentMonth = this.props.number;
+    let currentYear = YEAR;
     let temp = new Date(currentYear, currentMonth + 1, 0);
     let lastDay = temp.getDate();
     let arr = [];
@@ -89,15 +89,15 @@ export default class MonthComponent extends Component {
       //   arr.unshift(' ');
       // }
       obj[currentMonth] = arr;
-      console.log(obj);
+      // console.log(obj);
     }
     
 
 createTable();
     return (
       <div>
-        <div className='month'>
-          <div>{title}</div>
+        <div className='month' id= {`month${this.props.number}`}>
+          <div className='month_title' id={`month_title${this.props.number}`}>{title}</div>
           <div className='date_Content'>
             {DateOfWeek.map(item => (
               <div className='day_In_Week'>{item}</div>
