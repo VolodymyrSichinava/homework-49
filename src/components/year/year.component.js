@@ -31,21 +31,13 @@ export default class YearComponent extends Component {
 
   render() {
     YEAR = this.state.year;
-    // let monthInYear = 12;
-    // // let dayInMonth = new Date(currentYear, month, 0).getDate();
-    // let arr = [];
-    // let arrDay = [];
-    
-    // for (let i = 1; i < monthInYear + 1; i++) {
-    //   arr.push(new Date(this.state.year, i, 0).getDate());
-    // }
     
     return (
       <div className="App">
         <div className='year'>
-          <button type="button" onClick={this.buttonPrevClickHandler}>Prev</button>
+          <button type="button" className='btn_year prev' onClick={this.buttonPrevClickHandler}>&lang;</button>
           {this.state.year}
-          <button type="button" onClick={this.buttonNextClickHandler}>Next</button>
+          <button type="button" className='btn_year next' onClick={this.buttonNextClickHandler}>&rang;</button>
         </div>
         <div className='list_month'>
           {this.state.months.map(month => <Month number={month.number} startDate={month.startDate}/>)}
